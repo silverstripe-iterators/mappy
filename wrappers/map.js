@@ -45,8 +45,6 @@ class Map extends EventEmitter {
           self.map.fire('mappy.marker.click', feature);
         });
 
-        this.map.fire('mappy.marker.update', feature);
-
         if (!config.popupFilter || config.popupFilter(feature))
           // don't bind the feature popup if it isn't defined in config
           if (config.popup(feature.properties) !== undefined) {
