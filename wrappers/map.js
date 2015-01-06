@@ -41,8 +41,10 @@ class Map extends EventEmitter {
       options.onEachFeature = (feature, layer) => {
         // Add custom event hook
         layer.on('click', function () {
-          this._map.fire('mappy.marker.click', feature);
+          self.map.fire('mappy.marker.click', feature);
         });
+
+        this.map.fire('mappy.marker.update', feature);
 
         if (!config.popupFilter || config.popupFilter(feature))
           // don't bind the feature popup if it isn't defined in config
