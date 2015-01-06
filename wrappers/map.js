@@ -35,6 +35,7 @@ class Map extends EventEmitter {
    */
   setGeojsonLayer(name, config) {
     var options = {}
+    var self = this
     if (config.style)
       options.style = (feature) => config.style(feature.properties)
     if (config.popup) {
