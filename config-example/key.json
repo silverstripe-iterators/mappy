@@ -1,6 +1,9 @@
 {
   "domElementId": "key",
   "title": "My map key",
+  "template": "key.html",
+  "itemTemplate": "keyItem.html",
+  "listWrapperClass": ".items",
   "layers": [
     {
       "name": "layer1",

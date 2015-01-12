@@ -222,6 +222,28 @@ Manually tested in:
 ]
 ```
 
+### Key
+```json
+{
+  "domElementId": "key", // The dom element used to render the key.
+  "title": "My map key",
+  "template": "key.html", // Handlebars template used to render the key wrapper.
+  "itemTemplate": "keyItem.html", // Handlebars template used to render the key items.
+  "listWrapperClass": ".items", // Dom element in 'template' key wrapper used to render the key items.
+  "layers": [
+    {
+      "name": "layer1",
+      "description": "My Layer",
+      "checked": true,
+      "templateData": { // optional data to pass through to the 'itemTemplate'
+                        // eg. can be referenced with 'templateData.example1'
+        "example1": "test"
+      }
+    }
+  ]
+}
+```
+
 ## Google
 To generate a Google tile base layer specify the 'google' type on the map.json tileLayers config.
 Include the Google javascript api to your project html `<script src="http://maps.google.com/maps/api/js?v=3&sensor=false"></script>`.
