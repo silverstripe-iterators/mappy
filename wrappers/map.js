@@ -42,7 +42,7 @@ class Map extends EventEmitter {
       options.onEachFeature = (feature, layer) => {
         // Add custom event hook
         layer.on('click', function () {
-          self.map.fire('mappy.marker.click', feature);
+          self.map.fire('mappy.marker.click', { data: feature, layer: config.name });
         });
 
         if (!config.popupFilter || config.popupFilter(feature))
